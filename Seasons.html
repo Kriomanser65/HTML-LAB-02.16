@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons</title>
+</head>
+<style>
+.txt1 
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.txt2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+.arrow-button 
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.arrow-icon 
+{
+    width: 20px;
+    height: 20px;
+    fill: black;
+    transition: transform 0.3s ease;
+}
+.content 
+{
+    display: none;
+}
+</style>
+<body>
+<h1 class="txt1">Seasons</h1>
+<!--WINTER-->
+<button class="arrow-button" onclick="toggleContent('winter')">
+    <svg class="arrow-icon" viewBox="0 0 24 24">
+        <path d="M7 10l5 5 5-5z" />
+    </svg> 
+    <p class="txt2">Winter</p>
+</button> 
+<div id="winterContent" class="content">
+    <ul style="list-style: none;">
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/winter_16.png" alt="Winter.png" style="margin-right: 10px;">
+            <p class="txt1">December</p>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/winter_16.png" alt="Winter.png" style="margin-right: 10px;">
+            <p class="txt1">January</p>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/winter_16.png" alt="Winter.png" style="margin-right: 10px;">
+            <p class="txt1">February</p>
+        </li>
+    </ul>
+</div>
+<!--SPRING-->
+<button class="arrow-button" onclick="toggleContent('spring')">
+    <svg class="arrow-icon" viewBox="0 0 24 24">
+        <path d="M7 10l5 5 5-5z" />
+    </svg> 
+    <p class="txt2">Spring</p>
+</button> 
+<div id="springContent" class="content">
+    <ul style="list-style: none;">
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/spring_16.png" alt="Spring.png" style="margin-right: 10px;">
+            <p class="txt1">March</p>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/spring_16.png" alt="Spring.png" style="margin-right: 10px;">
+            <p class="txt1">April</p>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/spring_16.png" alt="Spring.png" style="margin-right: 10px;">
+            <p class="txt1">May</p>
+        </li>
+    </ul>
+</div>
+<!--SUMMER-->
+<button class="arrow-button" onclick="toggleContent('summer')">
+    <svg class="arrow-icon" viewBox="0 0 24 24">
+        <path d="M7 10l5 5 5-5z" />
+    </svg> 
+    <p class="txt2">Summer</p>
+</button> 
+<div id="summerContent" class="content">
+    <ul style="list-style: none;">
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/summer_16.png" alt="Summer.png" style="margin-right: 10px;">
+            <p class="txt1">June</p>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/summer_16.png" alt="Summer.png" style="margin-right: 10px;">
+            <p class="txt1">July</p>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/summer_16.png" alt="Summer.png" style="margin-right: 10px;">
+            <p class="txt1">August</p>
+        </li>
+    </ul>
+</div>
+<!--AUTUMN-->
+<button class="arrow-button" onclick="toggleContent('autumn')">
+    <svg class="arrow-icon" viewBox="0 0 24 24">
+        <path d="M7 10l5 5 5-5z" />
+    </svg> 
+    <p class="txt2">Autumn</p>
+</button> 
+<div id="autumnContent" class="content">
+    <ul style="list-style: none;">
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/autumn_16.png" alt="Autumn.png" style="margin-right: 10px;">
+            <p class="txt1">September</p>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/autumn_16.png" alt="Autumn.png" style="margin-right: 10px;">
+            <p class="txt1">October</p>
+        </li>
+        <li style="display: flex; align-items: center;">
+            <img src="./New folder/icons/autumn_16.png" alt="Autumn.png" style="margin-right: 10px;">
+            <p class="txt1">November</p>
+        </li>
+    </ul>
+</div>
+<script>
+function toggleContent(season) 
+{
+    var content = document.getElementById(season + "Content");
+    var arrowIcon = content.previousElementSibling.querySelector(".arrow-icon");
+    if (content.style.display === "none") 
+    {
+        content.style.display = "block";
+        arrowIcon.style.transform = "rotate(180deg)";
+    } 
+    else 
+    {
+        content.style.display = "none";
+        arrowIcon.style.transform = "rotate(0deg)";
+    }
+}
+</script>
+</body>
+</html>
